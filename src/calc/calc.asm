@@ -26,8 +26,8 @@ calc proc
 	mov rbx, gs:[rax + 60h]	; rbx = PEB addr
 	mov rbx, [rbx + 18h]	; rbx = LDR
 	mov rbx, [rbx + 20h]	; rbx = NTDLL entry
-	mov rbx, [rbx]		    ; rbx = KernelBase Entry
-	mov rbx, [rbx]		    ; rbx = Kernel32 Entry
+	mov rbx, [rbx]		; rbx = KernelBase Entry
+	mov rbx, [rbx]		; rbx = Kernel32 Entry
 	mov rbx, [rbx + 20h]	; rbx = &K32 Base
 
 	;Get export table
