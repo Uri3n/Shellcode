@@ -22,6 +22,7 @@ All of the shellcode featured here is for Windows. Linux shellcode is far less d
 - **calc**: written in pure assembly, specifically MASM (Microsoft's "Macro Assembler"). Simply opens the calculator app. Similar to the one found in the MSFVenom toolkit.
 - **msgbox**: written in C++. Pops a message box.
 - **reverse_shell**: A basic reverse shell payload that redirects the input and output of a command prompt process (spawned via Win32 CreateProcess) into a TCP socket. For testing purposes this payload will reach out to **localhost 4444**. You can listen on this port with say, netcat, if you want to mess around with it (i.e. something like `nc -l 127.0.0.1 4444` will work). If you want to have it connect to a different socket you can modify the stack string at the beginning of the rshell_impl() function as well as the host port.
+- **screenshot**: Creates an in-memory screen capture and writes it to a file called **ss.bmp** in the working directory of the victim process.
 
 # How do I build these payloads?
 I'd highly recommend messing around with the source code and building it yourself. Unfortunately, shellcode is rather tricky when it comes to the build process. You cannot simply hit build and expect everything to work. Take note of the fact that there is a Python script called _scn_dump_ in the scripts folder that will extract the .text section from a given executable and dump it into a file of your choosing. You'll need this.

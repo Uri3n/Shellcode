@@ -1,6 +1,6 @@
 #include <Windows.h>
 #include <stdint.h>
-#include "native_defs.h"
+#include "vendor/native_defs.h"
 
 
 /* Let's not bother with an MSVC ifdef...
